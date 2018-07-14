@@ -20,8 +20,13 @@
         let image = document.createElement('IMG')
         let par = document.createElement('P')
         par.innerHTML = '0'
+        let integer = parseInt(par.innerHTML)
+        console.log(par.innerHTML)
         let kitten = './kit' + i +'.jpg'
         image.setAttribute('src', kitten)
+        image.addEventListener('click', () => {
+          return par.innerHTML = (integer += 1)
+        })
         header.appendChild(text)
         section[0].appendChild(header)
         section[0].appendChild(par)
