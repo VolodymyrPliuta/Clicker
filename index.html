@@ -19,13 +19,16 @@
         let div = document.createElement('DIV')
         let image = document.createElement('IMG')
         let par = document.createElement('P')
-        image.setAttribute('src', './kit0.jpg')
+        par.innerHTML = '0'
+        let kitten = './kit' + i +'.jpg'
+        image.setAttribute('src', kitten)
         header.appendChild(text)
         section[0].appendChild(header)
         section[0].appendChild(par)
         section[0].appendChild(div)
         let container = section[0].appendChild(div)
         container.appendChild(image)
+        container.appendChild(par)
       }
 
       /*  let cat1 = document.getElementById('cat1');
