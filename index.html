@@ -21,8 +21,17 @@
         let par = document.createElement('P')
         par.innerHTML = '0'
         let integer = parseInt(par.innerHTML)
-        console.log(par.innerHTML)
         let kitten = './kit' + i +'.jpg'
+        header.addEventListener('click', () => {
+          let divStyle = document.getElementsByTagName('div')
+            for(let x = 0; x < names.length; x++) {
+              if(divStyle[x].getAttribute('style') !== 'display: none'){
+                divStyle[x].setAttribute('style', 'display: none')
+              }
+            }
+          //div.getAttribute('style'))
+          div.removeAttribute('style')
+        })
         image.setAttribute('src', kitten)
         image.addEventListener('click', () => {
           return par.innerHTML = (integer += 1)
@@ -34,6 +43,7 @@
         let container = section[0].appendChild(div)
         container.appendChild(image)
         container.appendChild(par)
+        div.setAttribute('style', 'display: none')
       }
 
       /*  let cat1 = document.getElementById('cat1');
